@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор</title>
+</head>
+<body>
+
+    {% if oper == '+' %}
+        {{ a + b }}
+    {% elif oper == '-' %}
+        {{ a - b }}
+    {% elif oper == '*' %}
+        {{ a * b }}
+    {% elif oper == ':' %}
+        {% if b == 0 %}
+            Ошибка
+        {% else %}
+            {{ a / b }}
+        {% endif %}
+    {% elif oper == '**' %}
+        {{ a ** b }}
+    {% else %}
+        Ошибка
+    {% endif %}
+
+</body>
+</html>
