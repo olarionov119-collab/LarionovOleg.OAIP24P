@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Детали</title>
+</head>
+<body>
+{% extends 'base.html' %}
+
+    {% block content %}
+        <h3>{{ material.title }}</h3>
+        <p>{{ material.id }}</p>
+        <p>{{ material.category }}</p>
+        <p>{{ material.author }}</p>
+        <p>{{ material.description }}</p>
+        <a href="{{ url_for('materials_list') }}">Назад к списку</a>
+    {% endblock %}
+</body>
+</html>
